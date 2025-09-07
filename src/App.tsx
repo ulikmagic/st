@@ -1,5 +1,6 @@
 import { useState } from "react";
 import coffee from "./assets/coffee.svg";
+import coffeeBig from "./assets/coffee-big.svg";
 
 import "./styles/letter.css";
 import clsx from "clsx";
@@ -21,7 +22,9 @@ function App() {
             <div className="coffee">
               <img src={coffee} alt="coff" />
             </div>
-            <div className="heart a3"></div>
+            <div className="coffee-big">
+              <img src={coffeeBig} alt="title" />
+            </div>
           </div>
         </div>
       </div>
