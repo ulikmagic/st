@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+
+import "./styles/letter.css";
+import clsx from "clsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className="main">
+      <div className="envelope-wrapper">
+        <div id="envelope" className={clsx(isOpen ? "open" : "close")}>
+          <div className="front flap"></div>
+          <div className="front pocket"></div>
+          <div className="letter">
+            Привет Айганым! Хочу пригласить тебя на чашку кофе. Буду рад, если
+            согласишься. <br /> Мой телеграм:{" "}
+            <span className="telegram">@ulikmagic</span>
+          </div>
+          <div className="hearts">
+            <div className="heart a1"></div>
+            <div className="heart a2"></div>
+            <div className="heart a3"></div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <div className="reset">
+        <button id="open" onClick={() => setIsOpen(true)}>
+          Открыть
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <button id="reset" onClick={() => setIsOpen(false)}>
+          Закрыть
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
