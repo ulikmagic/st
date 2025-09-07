@@ -104,7 +104,7 @@ main {
     right: 0;
     z-index: 2;
 }
-.heart {
+.heart, .coffee {
     position: absolute;
     bottom: 0;
     right: 10%;
@@ -126,25 +126,18 @@ main {
     transform: rotate(45deg);
     transform-origin: 100% 100%;
 }
-.close .heart {
+.close .heart, .close .coffee {
     opacity: 0;
     animation: none;
 }
-.a1 {
-    left: 20%;
-    transform: scale(0.6);
-    opacity: 1;
-    animation: slideUp 4s linear 1, sideSway 2s  ease-in-out 4 alternate;
-    animation-fill-mode: forwards;
-    animation-delay: 0.7s;
-}
-.a2 {
+.coffee {
     left: 55%;
     transform: scale(1);
     opacity: 1;
     animation: slideUp 5s linear 1, sideSway 4s  ease-in-out 2 alternate;
     animation-fill-mode: forwards;
-    animation-delay: 0.7s;
+    /* animation-delay: 0.7s; */
+    width: 80px;
 }
 .a3 {
     left: 10%;

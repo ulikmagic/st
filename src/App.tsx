@@ -1,4 +1,5 @@
 import { useState } from "react";
+import coffee from "./assets/coffee.svg";
 
 import "./styles/letter.css";
 import clsx from "clsx";
@@ -17,8 +18,9 @@ function App() {
             <span className="telegram">@ulikmagic</span>
           </div>
           <div className="hearts">
-            <div className="heart a1"></div>
-            <div className="heart a2"></div>
+            <div className="coffee">
+              <img src={coffee} alt="coff" />
+            </div>
             <div className="heart a3"></div>
           </div>
         </div>
